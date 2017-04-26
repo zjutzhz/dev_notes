@@ -1,5 +1,5 @@
 
-## Get the selected project
+## Get the selected project [[Ref]](http://stackoverflow.com/questions/6892294/eclipse-plugin-how-to-get-the-path-to-the-currently-selected-project)
 ```Java
     IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
     if (window != null)
