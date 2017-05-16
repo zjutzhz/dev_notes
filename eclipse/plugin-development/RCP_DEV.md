@@ -66,6 +66,16 @@ protected void initializeImageRegistry(ImageRegistry reg) {
 }
 ```
 
+3. Example 3 [[Ref]](http://stackoverflow.com/questions/5756218/eclipse-ide-plugin-development-copy-files-from-plugin-jar-to-active-project-fol)
+
+```Java
+Bundle bundle = Platform.getBundle( "your.plugin.id" );
+InputStream stream = FileLocator.openStream( bundle, "path.in.plugin", false );
+IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject( "your.project" );
+IFile file = project.getFile( "something/abc.txt" );
+file.create( stream, true, null );
+``` 
+
 ## File Path String to IFile [[Ref]](http://stackoverflow.com/questions/960746/how-to-convert-from-file-to-ifile-in-java-for-files-outside-the-project)
 Works for the file in  workspace
 ```Java
