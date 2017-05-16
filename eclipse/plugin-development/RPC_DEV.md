@@ -65,3 +65,11 @@ protected void initializeImageRegistry(ImageRegistry reg) {
 	}
 }
 ```
+
+## File Path String to IFile [[Ref]](http://stackoverflow.com/questions/960746/how-to-convert-from-file-to-ifile-in-java-for-files-outside-the-project)
+Works for the file in  workspace
+```Java
+IWorkspace workspace= ResourcesPlugin.getWorkspace();    
+IPath location= Path.fromOSString(file.getAbsolutePath()); 
+IFile ifile= workspace.getRoot().getFileForLocation(location);
+```
