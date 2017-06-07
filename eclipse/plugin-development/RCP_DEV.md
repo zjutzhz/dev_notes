@@ -83,3 +83,18 @@ IWorkspace workspace= ResourcesPlugin.getWorkspace();
 IPath location= Path.fromOSString(file.getAbsolutePath()); 
 IFile ifile= workspace.getRoot().getFileForLocation(location);
 ```
+
+## Add build path to recent build path list
+```Java
+JavaProject javaProject = JavaCore.create(proj);
+IClasspathEntry[] entries = javaProject.getRawClasspath();
+
+IClasspathEntry[] newEntries = new IClasspathEntry[entries.length + 1];
+System.arraycopy(entries, 0, newEntries, 0, entries.length);
+
+IPath srcPath= javaProject.getPath().append("target/generated-sources");
+IClasspathEntry srcEntry= JavaCore.newSourceEntry(srcPath, null);
+
+newEntries[entries.length] = JavaCore.newSourceEntry(srcEntry.getPath());
+javaProject.setRawClasspath(newEntries, null);
+``` 
