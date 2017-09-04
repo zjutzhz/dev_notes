@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="GBK">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encoding Test</title>
+    <style>
+        label {
+            width: 200px;
+            display: inline-block;
+        }
+        
+        input[type="text"] {
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="zh_CN.utf8.js" charset="UTF-8"></script>
+    <script src="zh_CN.utf8.wrong.js" charset="GBK"></script>
+    <script src="zh_CN.gbk.js" charset="GBK"></script>
+    <script src="zh_CN.gbk.wrong.js" charset="UTF-8"></script>
+    <script>
+        window.onload = function() {
+            var c_by_utf8 = new Charactors_by_utf8();
+            var c_by_gbk = new Charactors_by_gbk();
+            document.querySelector("#ch_utf8").value = c_by_utf8.getText();
+            document.querySelector("#ch_gbk").value = c_by_gbk.getText();
+            document.querySelector("#ch_utf8_wrong").value = c_by_utf8.getTextByWrong();
+            document.querySelector("#ch_gbk_wrong").value = c_by_gbk.getTextByWrong();
+        }
+    </script>
+    <div>
+        <label for="ch1">Load js file by utf-8 charset:</label>
+        <input type="text" name="ch1" id="ch_utf8">
+    </div>
+    <div>
+        <label for="ch_gbk">Load js file by gbk charset:</label>
+        <input type="text" name="ch_gbk" id="ch_gbk">
+    </div>
+    <div>
+        <label for="ch_utf8_wrong">Load js file by gbk charset:</label>
+        <input type="text" name="ch_utf8_wrong" id="ch_utf8_wrong">
+    </div>
+    <div>
+        <label for="ch_gbk_wrong">Load js file by utf-8 charset:</label>
+        <input type="text" name="ch_gbk_wrong" id="ch_gbk_wrong">
+    </div>
+</body>
+
+</html>
