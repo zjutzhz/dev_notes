@@ -81,4 +81,6 @@ Frequencies:
 			* 2484 MHz [14] (disabled)
 ```
 
-参考： [Broadcom: not able to see my wifi](https://unix.stackexchange.com/questions/167009/broadcom-not-able-to-see-my-wifi)
+参考：
+1. [Broadcom: not able to see my wifi](https://unix.stackexchange.com/questions/167009/broadcom-not-able-to-see-my-wifi)
+2. [Wifi 5GHz AP Mode: What does \`no IR\` means and can I bypass it?](https://superuser.com/questions/809282/wifi-5ghz-ap-mode-what-does-no-ir-means-and-can-i-bypass-it)
