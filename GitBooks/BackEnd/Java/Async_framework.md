@@ -51,6 +51,10 @@ ActionnProcessor  处理
 
 需要一个时间调度器（线程）和nCoreNum+1 个任务调度器（线程）
 
+调度函数
+
+|map|用于结果转换|
+|then|
 
 
 
