@@ -1,0 +1,15 @@
+{
+  "language":"zh-hans",
+  "plugins":["terminal","anchor-navigation-ex"],
+  "pluginsConfig":{
+    "terminal":{
+      "copyBotton":true,
+      "fade":false,
+      "style":"flat"
+    },
+    "anchor-navigation-ex":{
+      "showLevel": true,
+      "multipleH1": false
+    }
+  }
+}
