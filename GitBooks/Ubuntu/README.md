@@ -1,5 +1,10 @@
 # Introduction
 
+## 查看硬件信息
+```
+sudo dmidecode -t memory
+```
+
 ```uml
 @startuml
 start
